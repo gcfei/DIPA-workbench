@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<fragment>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.knime.workbench.editor.svgexport.actionSet"
+            label="%actionSet.label"
+            visible="true">
+         <action
+               class="org.knime.workbench.editor.svgexport.actions.ExportToSVGAction"
+               icon="icons/export.png"
+               id="ExportToSVGAction"
+               label="%action.label"
+               menubarPath="file/ExportWorkflow"
+               tooltip="%action.tooltip">
+         </action>
+      </actionSet>
+   </extension>
+
+</fragment>

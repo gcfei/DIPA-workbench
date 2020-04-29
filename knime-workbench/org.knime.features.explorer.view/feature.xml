@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.knime.features.explorer.view"
+      label="DIPA Explorer view (do not install!)"
+      version="4.2.0.qualifier"
+      provider-name="DIPA, Zurich, Switzerland">
+
+   <description>
+      Feature containing the Explorer view plug-in. This is only used for internal purposes and must not be installed into KNIME.
+   </description>
+
+   <copyright>
+      Copyright by DIPA, Zurich, Switzerland
+   </copyright>
+
+   <plugin
+         id="org.knime.workbench.explorer.view"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

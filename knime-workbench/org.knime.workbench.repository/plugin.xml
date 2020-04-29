@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension-point id="nodes" name="%extension-point.name" schema="schema/Node.exsd"/>
+   <extension-point id="categories" name="%extension-point.name.0" schema="schema/Category.exsd"/>
+   <extension-point id="metanode" name="%extension-point.name.1" schema="schema/metanode.exsd"/>
+   <extension-point id="registeredFileExtensions" name="%extension-point.name.2" schema="schema/registeredFileExtensions.exsd"/>
+   <extension-point id="nodesets" name="%extension-point.name.3" schema="schema/nodesets.exsd"/>
+   
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="%view.name"
+            icon="icons/node_repository.png"
+            category="org.knime.workbench.ui.category"
+            class="org.knime.workbench.repository.view.DefaultRepositoryView"
+            id="org.knime.workbench.repository.view.RepositoryView">
+         <description>
+            %view.description
+         </description>
+      </view>
+   </extension>
+   <extension
+         id="NodeDocumentationGenerator"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.knime.workbench.repository.util.NodeDocuGenerator">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.knime.workbench.repository.view.QuickNodeInsertionHandler"
+            contextId="org.knime.workbench.editor.context"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+SPACE">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command 
+            categoryId="knime.command.category"
+            defaultHandler="org.knime.workbench.repository.view.QuickNodeInsertionHandler"
+            description="%command.description"
+            id="org.knime.workbench.repository.view.QuickNodeInsertionHandler"
+            name="%command.name">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:view?after=additions">
+         <command
+               commandId="org.knime.workbench.repository.view.QuickNodeInsertionHandler"
+               icon="icons/search.gif"
+               label="%command.label"
+               style="push"
+               tooltip="%command.tooltip">
+         </command>
+      </menuContribution>
+   </extension>
+      <extension
+         id="Nodalizer"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.knime.workbench.repository.nodalizer.Nodalizer">
+         </run>
+      </application>
+   </extension> 
+</plugin>

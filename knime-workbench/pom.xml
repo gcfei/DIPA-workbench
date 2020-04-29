@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.knime.maven</groupId>
+		<artifactId>ap.parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.knime</groupId>
+	<artifactId>knime-workbench</artifactId>
+	<version>${revision}${changelist}</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<revision>4.2.0</revision>
+		<changelist>-SNAPSHOT</changelist>
+		<feature-branch-extension.branchListProperty>git.branch</feature-branch-extension.branchListProperty>
+		<feature-branch-extension.appendArtifactoryProperties>false</feature-branch-extension.appendArtifactoryProperties>
+	</properties>
+
+
+	<modules>
+		<module>org.knime.features.workbench</module>
+		<module>org.knime.features.explorer.view</module>
+		<module>org.knime.update.workbench</module>
+		<module>org.knime.workbench</module>
+		<module>org.knime.workbench.core</module>
+		<module>org.knime.workbench.editor</module>
+		<module>org.knime.workbench.explorer.view</module>
+		<module>org.knime.workbench.editor.svgexport</module>
+		<module>org.knime.workbench.explorer.view.tests</module>
+		<module>org.knime.workbench.help</module>
+		<module>org.knime.workbench.repository</module>
+		<module>org.knime.workbench.repository.tests</module>
+		<module>org.knime.workbench.ui</module>
+		<module>org.knime.workbench.ui.browser</module>
+		<module>org.knime.workbench.ui.layout</module>
+		<module>org.knime.workbench.workflowcoach</module>
+	</modules>
+
+	<repositories>
+		<repository>
+			<id>p2-knime-base</id>
+			<layout>p2</layout>
+			<url>${knime.base.p2}</url>
+		</repository>
+		<repository>
+			<id>p2-knime-core</id>
+			<layout>p2</layout>
+			<url>${knime.core.p2}</url>
+		</repository>
+		<repository>
+			<id>p2-knime-expressions</id>
+			<layout>p2</layout>
+			<url>${knime.expressions.p2}</url>
+		</repository>
+		<repository>
+			<id>p2-knime-shared</id>
+			<layout>p2</layout>
+			<url>${knime.shared.p2}</url>
+		</repository>
+		<repository>
+			<id>p2-knime-tp</id>
+			<layout>p2</layout>
+			<url>${knime.tp.p2}</url>
+		</repository>
+		<repository>
+			<id>p2-knime-js-core</id>
+			<layout>p2</layout>
+			<url>${knime.js.core.p2}</url>
+		</repository>
+		<repository>
+			<id>p2-knime-svg</id>
+			<layout>p2</layout>
+			<url>${knime.svg.p2}</url>
+		</repository>
+	</repositories>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-source-feature-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>source-feature</id>
+						<phase>package</phase>
+						<goals>
+							<goal>source-feature</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<excludes>
+						<plugin id="org.apache.batik.dom.svg.clfix" />
+						<plugin id="org.apache.batik.dom.clfix" />
+						<plugin id="org.knime.workbench" />
+					</excludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<configuration>
+					<dependency-resolution>
+						<extraRequirements>
+							<requirement>
+								<!-- Required by org.knime.workbench.repository.util.NodeUtilTest -->
+								<type>eclipse-plugin</type>
+								<id>org.knime.base</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<!-- Required by tests using zt-zip -->
+								<type>eclipse-plugin</type>
+								<id>org.slf4j.api</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+						</extraRequirements>
+					</dependency-resolution>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<configuration>
+					<systemProperties>
+						<java.awt.headless>true</java.awt.headless>
+					</systemProperties>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

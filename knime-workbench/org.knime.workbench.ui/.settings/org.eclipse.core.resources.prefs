@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/org/knime/workbench/ui/async/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/database/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/favorites/actions/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/favorites/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/masterkey/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/navigator/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/p2/actions/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/preferences/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/startup/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/startup/view/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/wfvars/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/workflow/metadata/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/ui/wrapper/messages.properties=ISO-8859-1

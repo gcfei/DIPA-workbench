@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DIPA Workbench
+Bundle-SymbolicName: org.knime.workbench;singleton:=true
+Bundle-Version: 4.2.0.qualifier
+Bundle-Vendor: DIPA AG, Zurich, Switzerland
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

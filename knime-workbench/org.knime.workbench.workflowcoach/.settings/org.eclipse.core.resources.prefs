@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/org/knime/workbench/workflowcoach/data/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/workflowcoach/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/workflowcoach/prefs/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/workflowcoach/ui/messages.properties=ISO-8859-1

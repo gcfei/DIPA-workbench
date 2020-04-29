@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/org/knime/workbench/explorer/dialogs/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/filesystem/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/localworkspace/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/pathresolve/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/view/actions/export/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/view/actions/imports/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/view/actions/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/view/actions/validators/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/view/dialogs/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/view/dnd/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/view/messages.properties=ISO-8859-1
+encoding//src/org/knime/workbench/explorer/view/preferences/messages.properties=ISO-8859-1
